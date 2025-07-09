@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ecebeb;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8rem;
+            padding: 0 2rem;
+            background-color: #ecebeb;
+            background-image: url(https://product.hstatic.net/200000411281/product/banh_mi_xa_xiu_1_638677d6248a4e23847dbdb7acb3b906_master.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-family: Algerian;
+            color: rgb(240, 85, 7);
+            margin: 0;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0f0801;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-family: Elephant;
+            font-size: 1.3rem;
+        }
+
+        nav a:hover {
+            background-color: #f78708;
+            color: rgb(247, 246, 245);
+            transform: translateY(-3px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .hero {
+            text-align: center;
+            background: linear-gradient(150deg, #929abd 0%, #76c9cf 100%);
+            color: white;
+            margin-top: 8rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 1000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+            font-family: Lucida Calligraphy;
+        }
+
+        .comgiadinh {
+            text-align: center;
+            padding-top: 5rem;
+            color:#f78708;
+            font-family: Wide Latin;
+            font-size: 3rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 10rem;
+        }
+
+        .projects-card {
+            background-color: rgb(245, 126, 47);
+            padding: 1rem;
+            margin: 0.5rem;
+            border: 1px solid #b9c2b3;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            text-align: center;
+            height: 45rem;
+        }
+
+        .projects-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .projects-card img {
+            width: 100%;
+            height:22rem;
+            object-fit: cover;
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-color: #e9a508;
+            border-radius: 6rem 1rem;
+        }
+
+        .projects-card p {
+            margin-bottom: 1rem;
+            font-family: Bookman Old Style;
+            font-size: 18px;
+            color:#ebf3f3
+        }
+
+        h2 {
+            font-family: Aptos Black;
+            color:#f7f5f3;
+        }
+
+        li {
+            text-align: start;
+            color:#0c0600
+        }
+
+        ul {
+            padding-left: 2rem;
+        }
+
+        button {
+            background-color: #deece0;
+            border-color: #e9a508;
+            padding: 0.5rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button a {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-decoration: none;
+            font-family: Amasis MT Pro Black;
+            font-size: 20px;
+            color:#e2630e;
+            font-weight: 900;
+        }
+
+        .including {
+            color:#ecebeb
+        }
+       
+        .comphan {
+            text-align: center;
+            padding: 3rem;
+            color:#f78708;
+            font-family: Wide Latin;
+            font-size: 3rem;
+        }
+
+        @media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .projects-card {
+        height: auto;
+    }
+
+    .projects-card img {
+        height: 16rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero {
+        margin-top: 16rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 11fr;
+    }
+
+    .projects-card img {
+        height: auto;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SOKHOME</h1>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="story.html">Story</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+     <main>
+       <section class="hero">
+            <div class="hero">
+                <h1>Let's Oder</h1>
+                <p>
+                To selebrate 1 year of SOKHOME shop-30% off today
+                </p>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h1 class="comgiadinh">Com Gia Dinh</h1>
+            <div class="projects-grid">
+                <div class="projects-card">
+                    <h2>Mien Tay</h2>
+                    <img src="https://vcdn1-giadinh.vnecdn.net/2023/05/27/1Mmcmchung21-1685177049-2123-1685177497.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=rx2ccwzWkFKxC7RCEcJsqQ" alt="mam com mien taytay">
+                    <h3>$15</h3>
+                    <h3 class="including">Including</h3>
+                    <ul>
+                        <li>Rau Luoc</li>
+                        <li>Ca Hu Kho To</li>
+                        <li>Dau Phu Chien</li>
+                        <li>Canh Chua Tom</li>
+                        <li>Ca Tra Kho Tieu</li>
+                    </ul>
+                    <p class="usingfor">Using for 4 people</p>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Mien Tay</h2>
+                    <img src="https://ttol.vietnamnetjsc.vn/images/2020/10/25/10/08/1.png" alt="mam com mien tay">
+                    <h3>$18</h3>
+                    <h3 class="including">Including</h3>
+                    <ul>
+                        <li>Rau Luoc</li>
+                        <li>Kho To</li>
+                        <li>Tom Rim</li>
+                        <li>Xiu Mai</li>
+                        <li>Trai Cay</li>
+                    </ul>
+                    <p>Using for 4 people</p>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Mien Tay</h2>
+                    <img src="https://ttol.vietnamnetjsc.vn/images/2022/12/08/19/33/mam-com-001-20221208.jpg?width=260&s=maxrxHUDR302y87OBj1hoQ" alt="mam com mien tay">
+                    <h3>$15</h3>
+                    <h3 class="including">Including</h3>
+                    <ul>
+                        <li>Rau Tuoi</li>
+                        <li>Nem Nuong</li>
+                        <li>Canh Xuong Ham</li>
+                        <li>Bun</li>
+                        <li>Nuoc Mam</li>
+                    </ul>
+                    <p>Using for 4 people</p>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Mien Tay</h2>
+                    <img src="https://bepmina.vn/wp-content/uploads/2023/05/mam-com-mien-tay-1.jpeg" alt="mam com mien tay">
+                    <h3>$15</h3>
+                    <h3 class="including">Including</h3>
+                    <ul>
+                        <li>Ga Chien Nuoc Mam</li>
+                        <li>Rau Tuoi</li>
+                        <li>Cai Xao</li>
+                        <li>Trung Ngam Nuoc Mam</li>
+                        <li>Che Bi Do</li>
+                    </ul>
+                    <p>Using for 4 people</p>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+            </div>
+
+            <h2 class="comphan">Com Phan</h2>
+            <div class="projects-grid">
+                
+
+                <div class="projects-card">
+                    <h2>Com Tam</h2>
+                    <img src="https://dulichhaugiang.com.vn/wp-content/uploads/2024/04/DLHG_Dac-San-Com-Tam-O-Mien-Tay2.jpg" alt="mam com mien tay">
+                    <h3>$5</h3>
+                    <h3 class="including">Including</h3>
+                    <ul>
+                        <li>Com Trang</li>
+                        <li>Xuong Nuong</li>
+                        <li>Xiu Mai</li>
+                        <li>Bi Tron</li>
+                        <li>Rau Kem + Nuoc Mam</li>
+                    </ul>
+                    <p>Using for 1 person</p>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Bun Rieu</h2>
+                    <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2019/5/20/734275/Bun-Rieu-Cua.jpg" alt="mam com mien tay">
+                    <h3>$5</h3>
+                    <h3 class="including">Including</h3>
+                    <ul>
+                        <li>Bun Tuoi</li>
+                        <li>Nuoc Sup</li>
+                        <li>Thit Cua</li>
+                        <li>Dau Phu</li>
+                        <li>Rau Kem</li>
+                    </ul>
+                    <p>Using for 1 person</p>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>My Hai San</h2>
+                    <img src="https://mia.vn/media/uploads/blog-du-lich/an-sang-sai-gon-06-1694321715.jpg" alt="mam com mien tay">
+                    <h3>$5</h3>
+                    <h3 class="including">Including</h3>
+                    <ul>
+                        <li>My</li>
+                        <li>Nuoc Sup</li>
+                        <li>Thit Cua</li>
+                        <li>Muc Tuoi</li>
+                        <li>Cha Ca</li>
+                    </ul>
+                    <p>Using for 1 person</p>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Com Ga Xoi Mo</h2>
+                    <img src="https://i.ytimg.com/vi/Qn9VCUpKLHk/maxresdefault.jpg" alt="mam com mien tay">
+                    <h3>$5</h3>
+                    <h3 class="including">Including</h3>
+                    <ul>
+                        <li>Com Chien</li>
+                        <li>Nuoc Sup</li>
+                        <li>Ga Xoi Mo</li>
+                        <li>Rau Kem</li>
+                        <li>Nuoc Mam</li>
+                    </ul>
+                    <p>Using for 1 person</p>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+            </div>
+
+            
+
+
+
+        </section>
+
+</body>
+</html>
+</body>
+</html>

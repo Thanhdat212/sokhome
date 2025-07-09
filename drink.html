@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ecebeb;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8rem;
+            padding: 0 2rem;
+            background-color: #ecebeb;
+            background-image: url(https://product.hstatic.net/200000411281/product/banh_mi_xa_xiu_1_638677d6248a4e23847dbdb7acb3b906_master.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-family: Algerian;
+            color: rgb(240, 85, 7);
+            margin: 0;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0f0801;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-family: Elephant;
+            font-size: 1.3rem;
+        }
+
+        nav a:hover {
+            background-color: #f78708;
+            color: rgb(247, 246, 245);
+            transform: translateY(-3px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .hero {
+            text-align: center;
+            background: linear-gradient(150deg, #929abd 0%, #76c9cf 100%);
+            color: white;
+            margin-top: 8rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 1000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+            font-family: Lucida Calligraphy;
+        }
+
+        .comgiadinh {
+            text-align: center;
+            padding-top: 5rem;
+            color:#f78708;
+            font-family: Wide Latin;
+            font-size: 3rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 10rem;
+        }
+
+        .projects-card {
+            background-color: rgb(247, 125, 44);
+            padding: 1rem;
+            margin: 0.5rem;
+            border: 1px solid #b9c2b3;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            text-align: center;
+            height: 35rem;
+        }
+
+        .projects-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .projects-card img {
+            width: 100%;
+            height:22rem;
+            object-fit: cover;
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-color: #e9a508;
+            border-radius: 6rem 1rem;
+        }
+
+        .projects-card p {
+            margin-bottom: 1rem;
+            font-family: Bookman Old Style;
+            font-size: 18px;
+            color:#ebf3f3
+        }
+
+        h2 {
+            font-family: Aptos Black;
+            color:#f7f5f3;
+        }
+
+        li {
+            text-align: start;
+            color:#0c0600
+        }
+
+        ul {
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        button {
+            background-color: #deece0;
+            border-color: #e9a508;
+            padding: 0.5rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button a {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-decoration: none;
+            font-family: Amasis MT Pro Black;
+            font-size: 20px;
+            color:#e2630e;
+            font-weight: 900;
+        }
+
+        .including {
+            color:#ecebeb
+        }
+       
+        .comphan {
+            text-align: center;
+            padding: 3rem;
+            color:#f78708;
+            font-family: Wide Latin;
+            font-size: 3rem;
+        }
+
+        h3{
+            color:#0d2d30;
+            font-family: Amasis MT Pro Black;
+            font-size: 22px;
+            padding-bottom: 1rem;
+        }
+
+        @media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .projects-card {
+        height: auto;
+    }
+
+    .projects-card img {
+        height: 16rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero {
+        margin-top: 16rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 11fr;
+    }
+
+    .projects-card img {
+        height: auto;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SOKHOME</h1>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="story.html">Story</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+     <main>
+       <section class="hero">
+            <div class="hero">
+                <h1>Let's Oder</h1>
+                <p>
+                To selebrate 1 year of SOKHOME shop-30% off today
+                </p>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h1 class="comgiadinh">CÁFE</h1>
+            <div class="projects-grid">
+                <div class="projects-card">
+                    <h2>Capuchino</h2>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffe_Latte_at_Pulse_Cafe.jpg" alt="banh mi nem nuong">
+                    <h3>$3</h3>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Cáfe Late </h2>
+                    <img src="https://www.nespresso.com/ncp/res/uploads/recipes/nespresso-recipes-Latte-Macchiato.jpg" alt="Banh Mi Thit Khia">
+                    <h3>$3</h3>
+
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Salt Caffe</h2>
+                    <img src="https://www.allrecipes.com/thmb/SUs7po94w7k2OwqYDjC3H_ZW3JQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/96629-cafe-latte-ddmfs-hero-4x3-0288359d9c37485fa69afe5369dbcf2e.jpg" alt="mam com mien tay">
+                    <h3>$4</h3>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Hot Caffe</h2>
+                    <img src="https://restaurant-vauban.com/wp-content/uploads/2024/03/shutterstock_135404954.jpg" alt="mam com mien tay">
+                    <h3>$4</h3>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+            </div>
+
+            <h2 class="comphan">Soft Drink</h2>
+            <div class="projects-grid">
+                
+
+                <div class="projects-card">
+                    <h2>Tea Mild</h2>
+                    <img src="https://simexcodl.com.vn/wp-content/uploads/2024/05/tra-sua-ca-phe-2.jpg" alt="mam com mien tay">
+                    <h3>$3</h3>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Tra Dao</h2>
+                    <img src="https://hocphachehanoi.com.vn/upload/userfiles/images/cach-lam-tra-dao-02.jpg" alt="mam com mien tay">
+                    <h3>$3</h3>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Matcha Late</h2>
+                    <img src="https://www.hummingbirdhigh.com/wp-content/uploads/2022/08/01_iced-strawberry-matcha-latte_IMG_0091.jpg" alt="mam com mien tay">
+                    <h3>$3</h3>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+
+                <div class="projects-card">
+                    <h2>Orange Juice</h2>
+                    <img src="https://www.vinmec.com/static/uploads/medium_20220116_023441_757485_nuoc_ep_trai_cay_co_max_1800x1800_jpg_8c49987746.jpg" alt="mam com mien tay">
+                    <h3>$3</h3>
+                    <button type="submit"><a href="orderform.html">Oder</a></button>
+                </div>
+            </div>
+
+            
+
+
+
+        </section>
+
+</body>
+</html>
+</body>
+</html>

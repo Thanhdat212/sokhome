@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ecebeb;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8rem;
+            padding: 0 2rem;
+            background-color: #ecebeb;
+            background-image: url(https://product.hstatic.net/200000411281/product/banh_mi_xa_xiu_1_638677d6248a4e23847dbdb7acb3b906_master.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-family: Algerian;
+            color: rgb(240, 85, 7);
+            margin: 0;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0f0801;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-family: Elephant;
+            font-size: 1.3rem;
+        }
+
+        nav a:hover {
+            background-color: #f78708;
+            color: rgb(247, 246, 245);
+            transform: translateY(-3px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .hero {
+            text-align: center;
+            background: linear-gradient(150deg, #929abd 0%, #76c9cf 100%);
+            color: white;
+            margin-top: 8rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 1000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+            font-family: Lucida Calligraphy;
+        }
+
+        .projects {
+            padding: rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 50rem;
+        }
+
+        .projects-card {
+            background-color: rgb(247, 129, 50);
+            padding: 1rem;
+            margin: 0.5rem;
+            border: 1px solid #b9c2b3;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            text-align: center;
+            height: 30rem;
+        }
+
+        .projects-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .projects-card img {
+            width: 100%;
+            height:22rem;
+            object-fit: cover;
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-color: #e9a508;
+            border-radius: 6rem 1rem;
+        }
+
+        .projects-card a {
+            text-decoration: none;
+            font-family: Wide Latin;
+            color:#f7f5f3;
+            font-size: 1.5rem;
+        }
+
+        .projects-card p {
+            margin-top: 1rem;
+            font-family: Bookman Old Style;
+            font-size: 14px;
+            color:#ebf3f3
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 5rem;
+            background-color: #776f6f;
+            text-align: right;
+            }
+
+        footer p {
+            color: #ebf3f3;
+            text-align: left;
+            padding-top: 1rem;
+            font-family: "Bookman Old Style", serif;
+            font-size: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: right;
+            margin-bottom: 2rem;
+
+        }
+
+        footer a {
+            text-decoration: none;
+            font-family: "Bookman Old Style", serif;
+            color: #ece8e8;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #f39c12;
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 768px) {
+  header {
+    flex-direction: flex;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .projects {
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card {
+    margin: 0.25rem;
+    padding: 1rem;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .social-links a {
+    width: 100%;
+  }
+}
+
+/* Additional Responsive Enhancements */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Desktop View */
+@media (min-width: 1400px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SOKHOME</h1>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="story.html">Story</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+     <main>
+       <section class="hero">
+            <div class="hero">
+                <h1>Welcome to SOKHOME Shop</h1>
+                <p>
+                Home flavors. Stress-free moments. Pure peace.
+                </p>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+
+            <div class="projects-grid">
+                <div class="projects-card">
+                    <a href="homefood.html">Home food</a>
+                        <img src="https://danangcooking.com/wp-content/uploads/2016/03/menu.jpg" alt="home make food">
+                        <p>Homemade. Heartmade. Yours to enjoy.</p>
+                </div>
+
+                <div class="projects-card">
+                    <a href="fastfood.html">Fast Food</a>
+                        <img src="https://www.huongnghiepaau.com/wp-content/uploads/2019/08/banh-mi-kep-thit-nuong-thom-phuc.jpg" alt="foodfood">
+                        <p>Comfort in every bite, made with love and local flavors.</p>
+                 </div>
+
+                <div class="projects-card">
+                    <a href="drink.html">Drink</a>
+                        <img src="https://lamaca.vn/wp-content/uploads/2021/08//c%C3%A1ch-l%C3%A0m-mojito-2-840x500.jpg" alt="drinkdrink">
+                        <p>Cool, refreshing, and just what you need to unwind.</p>
+                </div>
+
+                <div class="projects-card">
+                    <a href="dessert.html">Dessert</a>
+                        <img src="https://suminhchau.com/wp-content/uploads/2023/04/banh-flan-2.jpg" alt="dessert">
+                        <p>A sweet ending to make your day even better.</p>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+                <p>&copy; 2025 TT.Dat No.17 Botumvatey pgd-Phompenh.</p>
+                    <div class="social-links">
+                        <a href="#">Zalo</a>
+                        <a href="#">Twitter</a>
+                        <a href="https://www.facebook.com/thach.thanh.dat.1979/">Facebook</a>
+                        <a href="">Telegram</a>
+                    </div>
+            </footer>
+</body>
+</html>
